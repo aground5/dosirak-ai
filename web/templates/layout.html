@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko-KR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <title>점심 도시락</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/default.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="module"></script>
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+
+</html>

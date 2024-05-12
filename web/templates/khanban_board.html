@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<header>
+    <h1>Drag & Drop<br/><span>{{date_str}} 도시락 칸반 보드</span></h1>
+</header>
+
+<div class="add-task-container">
+    <input type="text" maxlength="12" id="taskText" placeholder="새 주문..." onkeydown="if (event.keyCode == 13)
+                        document.getElementById('add').click()">
+    <button id="add" class="button add-button">주문 추가</button>
+</div>
+
+<div class="main-container">
+    <ul class="columns">
+
+        <li class="column">
+            <div class="column-header">
+                <h4>미분류 주문</h4>
+            </div>
+            <ul class="task-list" id="unclassified"></ul>
+        </li>
+
+        <li class="column doing-column">
+            <div class="column-header">
+                <h4>발열도시락</h4>
+            </div>
+            <ul class="task-list" id="heat"></ul>
+        </li>
+
+        <li class="column to-do-column">
+            <div class="column-header">
+                <h4>보온도시락</h4>
+            </div>
+            <ul class="task-list" id="warm"></ul>
+        </li>
+
+        <li class="column done-column">
+            <div class="column-header">
+                <h4>샐러드</h4>
+            </div>
+            <ul class="task-list" id="salad"></ul>
+        </li>
+
+        <li class="column trash-column">
+            <div class="column-header">
+                <h4>휴지통</h4>
+            </div>
+            <ul class="task-list" id="trash"></ul>
+            <div class="column-button">
+                <button id="delete" class="button delete-button">지우기</button>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+<footer>
+    <p>Built with <a href="https://github.com/bevacqua/dragula" target="_blank">Dragula</a> and Vanilla JS by <a href="http://nikkipantony.com" target="_blank">Nikki Pantony</a></p>
+</footer>
+{% endblock %}
